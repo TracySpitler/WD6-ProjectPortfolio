@@ -1,0 +1,277 @@
+@import url("https://use.fontawesome.com/releases/v5.2.0/css/all.css");
+
+:root {
+    --yellow: #fdc82e;
+    --blue: #2fabd0;
+    --green: #5cd083;
+    --red: #ed5b6b;
+    --dark: #343a40;
+}
+
+body {
+    color: var(--dark);
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+a, .nav-link {
+    color: rgba(255,255,255,.75);
+    text-transform: capitalize;
+    margin: 0 .5rem 0 .5rem;
+}
+
+* {
+  border-radius: 0 !important;
+
+}
+
+.current, a:hover, .nav-link:hover {
+    color: white;
+    border-bottom: solid 1px var(--yellow);
+    background-color: var(--dark) !important;
+}
+
+#myCarousel {
+    width: 50vw;
+}
+
+.alert {
+    padding: 1rem;
+    background-color: var(--blue);
+}
+
+iframe {
+    width: 500px;
+    height: 300px;
+}
+
+.input-wrapper {
+    position: relative;
+    padding: .5rem;
+}
+
+.bar {
+    width: 75vw;
+}
+
+.errorSpan:before {
+    color: #999;
+    font-family: "Font Awesome 5 Free";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    content: '\f057';
+    font-size: 18px;
+    top: 1rem;
+    margin-right: 1rem;
+    position: absolute;
+    right: 0;
+    opacity: 0;
+}
+
+.input-wrapper input {
+  padding-right: 30px;
+  border: 1px solid #eee;
+  border-left: 3px solid #ddd;
+  transition: border-color .5s ease-out;
+  width: 100%;
+  min-width: 125px !important;
+}
+
+.form input:required:empty + .errorSpan:before {
+    border-left-color: #eee;
+    opacity: 0;
+}
+
+.form input:valid {
+    border-left-color: var(--green);
+}
+
+.signup-form input:required:invalid + .errorSpan:before {
+    content: '*';
+    color: var(--red);
+    opacity: 1;
+}
+
+.form input:focus:invalid {
+    border-left-color: var(--red);
+}
+
+.form input:focus:valid + .errorSpan:before {
+    content: '\f058';
+    color: var(--green);
+    opacity: 1;
+}
+
+.form input:focus:invalid + .errorSpan:before {
+    content: '\f057';
+    color: var(--red);
+    opacity: 1;
+}
+
+.wrapper {
+    padding: .5rem;
+}
+
+h2 {
+    padding-bottom: 1rem;
+}
+
+#ajaxButton {
+    border: solid 2px var(--yellow) !important;
+    color: white;
+    background-color: var(--dark);
+}
+
+#ajaxButton:hover{
+    color: var(--dark);
+    background-color: var(--yellow);
+}
+
+.info {
+    background-color: var(--blue);
+    padding: 2rem;
+}
+
+.info h4 {
+    margin-bottom: 2rem;
+}
+
+
+strong {
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: transparent; /* Removes border color */
+    margin-left: 1rem;
+    padding: 1rem;
+}
+.navbar-dark .navbar-toggler:hover {
+    border: solid 1px var(--yellow);
+    color: var(--yellow);
+}
+
+.footer, .footer a {
+    color: white;
+}
+
+.footer a:hover {
+    color: var(--yellow);
+}
+
+.card-desc {
+    color: var(--blue);
+}
+
+.profile-form {
+    padding-top: 1rem;
+}
+
+button.add {
+    border: solid 2px var(--yellow) !important;
+}
+
+.fruit-btn {
+    padding: .3rem;
+    color: var(--dark) !important;
+    background-color: white;
+    text-decoration: none !important;
+}
+
+.fruit-btn:hover {
+    border-top: solid 2px var(--yellow) !important;
+    background-color: var(--yellow) !important;
+    color: var(--dark) !important;
+}
+
+a.delete {
+    border-bottom: solid 2px var(--red) !important;
+}
+
+a.delete:hover {
+    border-top: solid 2px var(--red) !important;
+    background-color: var(--red) !important;
+    color: white !important;
+}
+
+a.edit {
+    border-bottom: solid 2px var(--blue) !important;
+    margin-left: 3rem;
+}
+
+a.edit:hover {
+    border-top: solid 2px var(--blue) !important;
+    background-color: var(--blue) !important;
+    color: white !important;
+}
+
+a.update {
+    border-bottom: solid 2px var(--blue) !important;
+}
+
+a.update:hover {
+    border-top: solid 2px var(--blue) !important;
+    background-color: var(--blue) !important;
+    color: white !important;
+}
+
+a, button {
+    cursor: pointer;
+}
+
+.buy-btn {
+    margin-top: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border: none;
+}
+
+.book-item {
+    margin: 1rem;
+}
+
+.book-item:hover {
+    box-shadow: 0 0 20px #ddd;
+    cursor: pointer;
+}
+
+.book-item:hover .buy-btn {
+    background-color: var(--yellow) !important;
+}
+
+.book-links, .book-links:hover {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.current-search {
+    color: var(--blue);
+}
+
+#search-container {
+    padding-left: 1rem;
+}
+
+#parent {
+  display: flex;
+}
+#narrow {
+  width: 15vw;
+  text-align: right;
+}
+#wide {
+    flex: 1;
+    padding-right: 1rem;
+}
+
+.google {
+    color: var(--blue);
+    padding: 1rem;
+    margin-left: 1rem;
+}

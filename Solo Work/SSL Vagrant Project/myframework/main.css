@@ -1,0 +1,158 @@
+<style>
+
+:root {
+    --dark2: #080403;
+    --black: #1C2023;
+    --dark: #02082d;
+    --blue: #2fabd0;
+    --pink: #fb6d70;
+    --yellow: #fdc82e;
+}
+
+body {
+    background: url(https://images.pexels.com/photos/207135/pexels-photo-207135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    font-size: 1rem;
+    color: white;
+}
+
+/*-- Header & Footer--*/
+
+.header, .footer {
+    padding: 1rem;
+    background-color: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+.header {
+    display: flex;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
+ul {
+    display: flex;
+}
+
+.logo {
+    margin: 0 1rem 0 1rem;
+    font-weight: bold;
+    color: var(--yellow);
+    font-size: 2rem;
+    margin: auto 2rem auto 2rem;
+}
+
+li {
+    padding: .6rem;
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin: 0 .3rem 0 .3rem;
+}
+
+/*-- Navigation --*/
+
+a {
+    color: white;
+}
+
+li:hover {
+    border-bottom: solid 1px var(--yellow);
+    padding-bottom: .2rem;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: var(--pink);
+    border: none;
+}
+
+.week {
+    color: var(--yellow);
+}
+
+/*-- Card with Video--*/
+.card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: rgba(2, 8, 45, .5);
+    width: 70%;
+	height: 60%;
+    min-width: 300px;
+    min-height: 200px;
+    max-width: 600px;
+    max-height: 500px;
+	border-radius: 4px;
+	box-shadow: 0px 8px 12px 0px rgba(0,0,0,0.25);
+    transform: translate(-50%, -50%);
+    padding: 1.5rem;
+}
+
+iframe {
+    width: 100%;
+    height: 80%;
+    border-radius: 3px;
+}
+
+iframe:hover {
+    border: solid 3px var(--blue);
+}
+
+.description {
+    text-align: center;
+    position: absolute;
+    height: 20%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 1rem;
+    padding: .3rem;
+}
+
+
+.url-div {
+    background-color: var(--blue);
+    display: flex;
+    height: 2rem;
+    align-items: center;
+}
+
+.url-message {
+    margin-left: 1rem;
+}
+
+.overlay {
+    position: absolute;
+    display: flex;
+    background-color: var(--pink);
+    height: 2rem;
+    width: 100%;
+    align-items: center;
+    opacity: 0;
+}
+
+.url-span {
+    margin-left: 1rem;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+
+</style>
