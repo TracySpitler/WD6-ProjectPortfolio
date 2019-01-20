@@ -1,0 +1,120 @@
+body {
+    background: #f1f3f5;
+}
+
+.btn {
+    background-color: #334455;
+    color: #fff;
+}
+
+.btn:hover {
+    background-color: rgba(107, 85, 219, 1);
+}
+
+.update-btn, .delete-btn {
+    margin: .2rem;
+}
+
+.delete-btn:hover {
+    background-color: #ff3366;
+}
+
+.edit-btn {
+    background-color: #fff;
+    border: 1px solid #6b55db;
+    color: #6b55db;
+    text-transform: uppercase;
+}
+
+.edit-btn:hover {
+    background-color: #fff;
+    border: 1px solid #ffae00;
+    color: #ffae00;
+}
+
+.active {
+    background-color: #ffae00;
+}
+
+.card {
+    width: 60vw;
+    padding: 2rem;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin: 3rem auto;
+}
+
+.courseInfo {
+    font-weight: bold;
+    text-align: center;
+    color: #6b55db;
+    text-transform: uppercase;
+    padding-top: 1rem;
+}
+
+.toggle-hidden {
+    display: none;
+}
+
+.no-change {
+    font-weight: bold;
+    color: #6b55db;
+    cursor: default;
+}
+
+.change {
+    font-weight: bold;
+    font-style: italic;
+}
+
+td:not(:last-child) {
+    border-right: 1px solid #f1f3f5;
+}
+
+td input {
+    border: none;
+    background-color: transparent;
+}
+
+table {
+    text-align: left;
+    width: 100%;
+    table-layout: fixed;
+    margin-top: 1rem;
+    padding: .5rem;
+    border: 1px solid #f1f3f5;
+    border-bottom: 2px solid #6b55db;
+}
+
+table td, table th {
+    padding: 8px;
+}
+
+table tr:hover {
+    background-color: rgba(241, 243, 245, .5);
+}
+
+.highlight, .highlight:hover {
+    background-color: rgba(107, 85, 219, .1);
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #6b55db;
+    color: white;
+    text-transform: uppercase;
+}
+
+.err-msg {
+    width: 60vw;
+    position: absolute;
+    top: 3rem;
+    left: 20%;
+    text-align: center;
+    color: #ff3366;
+    margin: auto;
+}
+
+.fa-exclamation {
+    margin-right: .5rem;
+}
