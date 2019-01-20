@@ -1,0 +1,243 @@
+Tracy Spitler
+WD6 Online
+Week 1 - PHP Assessment - All Questions
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1. What does PHP stand for?
+    B. PHP: Hypertext Preprocessor
+
+2. PHP server scripts are surrounded by delimiters, which one?
+    B. <?php...?>
+
+3. How do you write “PHP Coding Rocks“ to the browser in PHP?
+    C. echo “PHP Coding Rocks”;
+
+4. All variables in PHP must start with which symbol?
+    B. $
+
+5. What is the correct way to end a PHP statement?
+    D. ;
+
+6. How do you get information from a form that is submitted using the "get" method?
+    C. $_GET[];
+
+7. When using the POST method, variables are displayed in the URL:
+    B. False
+
+8. In PHP you can use both single quotes ( ' ' ) and double quotes ( "" ) for strings:
+    A. True
+
+9. What is the correct way to create a function in PHP?
+    B. function myFunction() { .. }
+
+10. Which super global variable holds information about headers, paths, and script locations?
+    B. $_SERVER
+
+11. What is the correct way to add 1 to the $total variable?
+    C. $total++;
+
+12. Which is not a correct way to add a PHP comment?
+    B. <!-- ... -->
+
+13. Which one of the following variables has an illegal name?
+    B. $my-Var
+
+14. header 'Location: ?action=home’;
+Assuming MVC is used in the example above. The PHP code above is the correct way to  redirect your User to another page.
+    B. False
+
+15. In PHP, the only way to output text to the user’s browser is by using “echo”.
+    B. False
+
+16. How do you create an array in PHP?
+    B. $cars = array("Volvo", "BMW", "Toyota");
+
+17. The following “IF” statement is a valid way to write a conditional in PHP:  if (!is_numeric($studentpercent)) { ... }
+    A. True
+
+18. PHP Developers use the MySQL keyword “Add” to create a new record within our  database table.
+    B. False
+
+19. DSN stands for ‘Data Source Node’, which is a connection string that tells the PHP  Data Object (PDO) the type of database, where to access it, and the port to use.
+    B. False
+
+20. PDO stands for “PHP Data Object” and provides various methods  (Prepare/Bind/Execute) to prevent SQL Injection.
+    A. True
+
+21. CRUD stands for ‘Create, Review, Update, Delete’ and allows PHP developers to  to manage and manipulate databases.
+    B. False
+
+22. PHP Developers use the MySQL keyword ‘insert’ to add a new record that is stored in a  database table.
+    B. False
+
+23. This is the correct way to connect to a MySQL database in PHP: 
+$user = “root123”; $pass = “123root”; 
+$dbh = PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
+    B. False
+
+24. The PHP code below demonstrates the correct way to prepare a SQL statement:
+$stmt = $dbh->prepare("insert into gifts (gift_name, gift_price) values(:giftname, :giftprice)");
+    A. True
+
+25. Which of the following steps is not necessary when inserting records into a database  using MySQL and PHP in SSL:
+    D. Store the results in a variable using fetchAll();
+
+26. Below is an example of good DSN:
+'mysql:host=localhost;dbname=myssl;port=8889'
+    A. True
+
+27. Below is not the correct way to bind a PHP variable to a corresponding named  placeholder for a previously prepared SQL statement: 
+$stmt->bindParm(':fruitname', $fruitname);
+    B. False
+
+28. To execute a SQL statement, you should use the following syntax:
+$stmt=>execute();
+    A. True
+
+29. PHP stands for ‘PHP Hypertext: PreProcessor’ and has been available to the public  since 1995.
+    A. True
+
+30. MVC stands for ‘Model View Content’ and uses Object Oriented Programming  (OOP) concepts like objects, classes, methods, instantiation.
+    B. False
+
+31. A session is used to store info that can be used across multiple website pages &  sessions can be started with the session_start() function.
+    A. True
+
+32. Unlike a Session, Cookie information is stored on the user’s computer.
+    A. True
+
+33. Session variables are set with the PHP global variable: $_SERVER:
+    B. False
+
+34. Cookies can be created with the set_cookie()function:
+    B. False
+
+35. The value of $result will be:  
+$data = “Happy”; 
+$result = strlen($data) < 5; 
+echo $result;
+    B. False
+
+36. Evaluate the following: $data = trim(" 0 0 “); 
+The value of $data will result in $data = “0 0”.
+    A. True
+
+37. The $_FILE super global can be used to keep track of uploaded files.
+    B. False
+
+38. Cookie variables are set with the PHP super global variable: $_COOKIES:
+    B. False
+
+39. Below is the correct way to set up a form for uploading images:  
+<form action="" enctype="multipart/form-data" method=“POST"> 
+    <input type="text" name=“fileupload" /> 
+</form>
+    B. False
+
+40. Three (3) parameters will be passed via the URL shown below:  
+<a href=“pass.php?subject=SSL&web=FullSail&term=1602”>Results</a>
+    A. True
+
+41. Web developers should never trust the user input coming to a server-side script, and  should perform server-side validation in addition to any client-side validation through HTML5 or JavaScript.
+    B. False
+
+42. Hashing is a form of one-way encryption. They cannot be reversed, but it is possible  to guess various combinations.
+    A. True
+
+43. Which is the correct and best way to define a Class/Object in PHP:
+    C. class Graduate {...}
+
+44. Which is the correct and best way to define a property for a Class in PHP:
+    C. var $grad_gift = “money”;
+
+45. Before you can access properties & methods from a Class/Object, you must FIRST instantiate (—or make a instance/copy) using the “new” keyword.  Which is the correct & best way to do so for a class named “Graduate”?
+    A. $graduate1 = new Graduate();
+
+46. Using the instance of Class/Object “Graduate” that you selected above, what is  the correct & best way to reset the property called “$grad_gift” to a new value;
+    A. $graduate1->grad_gift = “Trip to Jamaica”;
+
+47. What is the correct & best way to “invoke” a Class’s method called  “process_gradCapGown”:
+    C. $graduate1->process_gradCapGown();
+
+48. Which is not a valid way to use the “$this” keyword inside of a Class?
+    A. echo $this;
+
+49. In PHP, the correct & best way to include an external file called  “grad_list” one-time is:
+    A. <?php  include(“grad_list.php”);  ?>
+
+50. How do you request information from a query string or URL in PHP?
+    C. $_GET[“grad_gift”];
+
+51. The correct & best way to use print_r() to see all defined PHP variables is:
+    B. <pre> <?php    print_r(get_defined_vars());   ?> </pre>
+
+52. The correct & best way to use var_dump() to see the contents of Super Global  variable $_POST is:
+    B. var_dump($_POST);
+
+53. Which of the following is not a necessary step when setting up your HTML Form to accept and process file uploads?
+    D. Set Form up so that it is using method="get"
+
+54. The Super Global $_GET is more secure than $_POST:
+    B. False
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ESSAY:
+
+55. What is the difference between “print_r” and “var_dump”?
+
+'print_r' outputs a key=>element format that's human readable. 'var_dump' outputs the same, plus object properties and references.
+
+56. Describe the relationship between a Class and a Method in PHP.
+
+A Class is a group of functions, and for an example, the Class will be a car.
+Functions are statements that do something. For instance, the horn function will make the car honk.
+
+57. In 2 or more sentences, describe the purpose of the “MODEL” in MVC.
+
+In MVC, the Model is responsible for the data of your project. This is where you structure your data, for example, a car and its required attributes, or a User and the information you need for the database.
+
+58. In 2 or more sentences, describe the role of the “CONTROLLER” in MVC.
+
+The Controller in an MVC handles how you control the data from the structure of your Model. This is where you will create a user (for example purposes), specify things like their name, email, password, etc. and do something with it such as save it to a database.
+
+59. What is “PDO”——in relation to PHP; What does it mean?
+
+PDO stands for PHP Data Object. It's an interface for more easily accessing databases, making your PHP functions to manipulate the data (fetch, queries, etc.) reusable from one database to another.
+
+60. Write PHP Syntax for the following: 
+Store “Michael Jackson” into a PHP variable. 
+Next, write all required code (include complete SQL + Prepare/Bind/Execute statements) that  will add Michael Jackson’s name to a database table called “favorite_music_artists”.
+
+<?php
+
+$king_of_pop = 'Michael Jackson';
+
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "favorite_music_artists";
+
+try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    // set the PDO error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // prepare sql and bind parameters
+    $stmt = $conn->prepare("INSERT INTO artist_name (king_of_pop)
+    VALUES (:king_of_pop)");
+    $stmt->bindParam(':king_of_pop', $king_of_pop);
+
+    // insert a row
+    $stmt->execute();
+
+    echo "New records created successfully";
+}
+catch (PDOException $e) {
+    echo "Error: " . $e->getMessage();
+}
+
+$conn = null;
+
+?>
