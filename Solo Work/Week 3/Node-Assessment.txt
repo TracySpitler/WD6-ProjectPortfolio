@@ -1,0 +1,154 @@
+Tracy Spitler
+WD6 Online
+Week 3 - Node.js Assessment - All Questions
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+1. There are 4 states (—or project phases) within the Agile Life Cycle.
+    False
+
+2. The Envision project phase of Agile is where you plan your sprints.
+    False
+
+3. When a feature is not implemented during a sprint and is added to the backlog list for the next sprint, this is known as “check-listing”.
+    False
+
+4. You should begin coding during the Speculate phase of Agile.
+    False
+
+5. Programmers and web developers do not necessarily need good problem solving, critical thinking, or project management skills. They only need to know how to write good code.
+    False
+
+6. Stakeholders and project goals are established during the Explore project phase.
+    False
+
+7. During the Explore phase, the Project Manager’s role is to direct & manage the work, keep everyone on task, and schedule meetings.
+    False
+
+8. The Agile project management process is best characterized by projects that are implemented over long periods of time.
+    False
+
+9. Start a new local repository called “July-FireWorks”.
+    $ git init July-Fireworks
+
+10. Create a file called “app.js” inside the “July-FireWorks” repo.
+    $ cd July-Fireworks
+    $ touch app.js
+
+11. Commit all files inside “July-FireWorks” repo to permanent version control.
+    $ git add .
+    $ git commit -m "[descriptive message]"
+    $ git push origin [branch-name]
+
+12. List all new or modified files to be committed.
+    $ git status
+
+13. Create a new branch for the project repo you created above.
+    $ git branch [branch-name]
+
+14. Remove the previous branch created above.
+    $ git branch -d [branch-name]
+
+15. Remove “app.js” from the repo.
+    $ rm app.js
+
+16. Download another Git project, along with its entire version history.
+    $ git clone [url]
+
+17. Node.js is a client-side platform built on Google Chrome's JavaScript Engine (V8 Engine).
+    False - it is also used server-side
+
+18. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+    True
+
+19. Node.js is open source, however, it is not a cross-platform runtime environment for developing server-side JavaScript applications.
+    False
+
+20. NPM stands for Node Pocket Manager and helps us work with online repositories for node.js modules, Dependency Management, Version Management and command line utility for installing Node.js packages.
+    False - Node Package Manager
+
+21. Which phrase below is not true about Node.js:
+    E.  None of the Above
+
+22. What will be the output of the following snippets?
+    app.js: console.log(‘nodebp’)
+    Terminal: node app.js
+
+    A. nodebp
+
+23. What will be the output of the following snippets?
+    app.js: var fs = require('fs');
+    var val = fs.readFileSync('data.csv', 'utf8').split('\n').length - 1
+    console.log(val)
+    data.csv: node is fun
+    much win
+    Terminal: node app.js
+
+    C. 2
+
+24. What will be the output of the following snippets?
+    app.js: var dep = require('./dep');
+    console.log(dep(3))
+    dep.js: module.exports = function (val) {
+        return val * 2;
+    }
+    Terminal: node app.js
+
+    B. 6
+
+25. What will be the output of the following snippets?
+    app.js: var http = require('http')
+    http.get('http://noderocks.com', function (response) {
+        response.setEncoding('utf8')
+        response.on('data', console.log)
+        response.on('error', console.error)
+    })
+    Terminal: node app.js
+
+    D. Other:
+    <html><head><meta http-equiv="refresh" content="0;url=http://www.dnsrsearch.com/index.php?origURL=http://noderocks.com/&bc="/></head><body><script type="text/javascript">window.location="http://www.dnsrsearch.com/index.php?origURL="+escape(window.location)+"&r="+escape(document.referrer)+"&bc=";</script></body></html>
+
+
+26. Explain the difference between MEAN and the Express.js Framework (---in 2 sentences).
+    MEAN is a software stack comprised of MongoDB, Express.js, Angular, and Node.js. Express.js is a framework build on top of Node and is a part of the MEAN stack.
+
+27. Explain the difference between an “asynchronous" and “synchronous” driven events in relation to APIs in Node.js (---in 2 sentences)?
+    Synchronous programming can block other processes from happening while waiting to finish something. Asynchronous programming allows those other processes to run while that API call waits to get a response.
+
+28. Describe the purpose of a Callback and give an example in Node.js (---in 2 sentences).
+    A callback is a function passed as an argument or parameter to another function. They are used to make sure certain code doesn't execute before other pieces of code have finished.
+
+    var fs = require('fs')
+
+    fs.readFile('/nothingtoseehere', handleIt)
+
+    function handleIt (error, file) {
+        if (error) return console.error('There was an error', error)
+        // otherwise, continue on and use 'file'
+    }
+
+29. Describe the purpose of NPM and explain its functionality (---in 2 sentences).
+    NPM is a package manager for the Node.js platform. It allows developers to install dependencies with one command through the package.json file.
+
+30. How do you create/delete/read a file in Node.js? Write the Syntax.
+    var fs = require('fs');
+
+    Read:
+    fs.readFile('somefile.html', function(err, data) {
+        // do something
+    });
+
+    Create: 
+    fs.readFile('somefile.html', function(err, data) {
+        // do something
+    });
+
+    Delete:
+    fs.unlink('newfile.txt', function (err) {
+        if (err) throw err;
+        console.log('File deleted!');
+    });
+
+31. Develop the syntax for a simple "Full Sail Grads Rock!” app in Node.js:
+
+    App located in myFSapp folder.
