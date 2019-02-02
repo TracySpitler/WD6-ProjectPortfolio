@@ -1,0 +1,15 @@
+body {
+    font-family: arial;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav h5 {
+    background: rgba(255,255,255,0.2);
+}
+
+main {
+    max-width: 67vw;
+}

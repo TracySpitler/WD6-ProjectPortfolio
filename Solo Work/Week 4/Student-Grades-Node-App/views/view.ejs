@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/css/mdb.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="styles.css" rel="stylesheet">
+
+        <title>Student Grades with Node</title>
+
+    </head>
+    <body>
+        <nav class="nav indigo darken-4 py-4 justify-content-center text-white">
+            <ul class="m-0">
+                <li><h5 class="p-2">Quiz #4: Node.js Practical</h5></li>
+            </ul>
+        </nav>
+        <main class="my-4 mx-auto text-body">
+
+            <% if (locals.notvalid) { %>
+                <p class="indigo-text"><em>* <%= locals.notvalid[0].msg %></em></p>
+            <% } %>
+
+            <form class="card" action="/create" method="post">
+                <h5 class="card-header">Student Grades Report (Teacher's App)</h5>
+                <div class="card-body">
+                    <h5 class="card-title">Input your student's name and final grade percentage (%):</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" name="studentname" placeholder="Student Name" required>
+                        <input type="number" class="form-control" step="0.01" min="0" name="studentpercent" placeholder="Student Percent" required>
+                        <div class="input-group-append">
+                          <button class="btn btn-md btn-cyan m-0 px-3" type="submit">Submit</button>
+                          <button class="btn btn-md btn-elegant m-0 px-3" type="reset">Reset</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="card mt-4">
+                <h5 class="card-header">Student Records</h5>
+                <div class="card-body mt-3 mx-4">
+                  <% if (locals.students && locals.students.length > 0) { %>
+                    <table class="table table-hover">
+                      <thead class="indigo darken-4 white-text">
+                        <tr>
+                          <th scope="col">ID</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Percent</th>
+                          <th scope="col">Grade</th>
+                          <th scope="col">Edit</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <% for (var i = 0; i < locals.students.length; i++) { %>
+                            <tr>
+                              <th scope="row"><%= [i+1] %></th>
+                              <td><%= locals.students[i].studentname %></td>
+                              <td><%= locals.students[i].studentpercent %></td>
+                              <td><%= locals.students[i].studentlettergrade %></td>
+                              <td>
+                                <span><a data-toggle="collapse" href="#collapse<%= locals.students[i]._id %>" class="btn-floating btn-sm btn-cyan"><i class="fas fa-pen"></i></a></span>
+                                <span><a href="<%= locals.students[i]._id %>" class="btn-floating btn-sm btn-unique delete"><i class="fas fa-bomb"></i></a></span>
+                              </td>
+                            </tr>
+                            <tr class="collapse indigo lighten-5" id="collapse<%= locals.students[i]._id %>">
+                              <th scope="row"><%= [i+1] %></th>
+                              <form id="update" action="/<%= locals.students[i]._id %>" method="post">
+                                  <td>
+                                      <input type="text" class="form-control" name="studentname" placeholder="<%= locals.students[i].studentname %>" value="<%= locals.students[i].studentname %>" required>
+                                  </td>
+                                  <td>
+                                      <input type="number" class="form-control" step="0.01" min="0" name="studentpercent" placeholder="<%= locals.students[i].studentpercent %>"  value="<%= locals.students[i].studentpercent %>" required>
+                                  </td>
+                                  <td><%= locals.students[i].studentlettergrade %></td>
+                                  <td>
+                                      <span><a onclick="document.getElementById('update').submit()" class="btn-floating btn-sm btn-amber update"><i class="px-3 fas fa-check"></i></a></span>
+                                  </td>
+                              </form>
+                            </tr>
+                        <% } %>
+
+                      </tbody>
+                    </table>
+
+                  <% } else { %>
+                      <h5 class="card-title indigo-text">No student records exist. Why don't you create one?</h5>
+                  <% } %>
+                </div>
+            </div>
+        </main>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- JQuery -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.0/js/mdb.min.js"></script>
+        <!-- Custom JS -->
+        <script type="text/javascript" src="javascript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,182 @@
+Tracy Spitler
+WD6 Online
+Week $ - Cummulative Assessment - All Questions
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+** True or False **
+
+1. There are 5 stages (or project phases) within the Agile Project Management Life Cycle.
+    True
+
+2. The Envision project phase of Agile is where you plan your sprints.
+    False
+
+3. When a feature isn’t implemented during a Sprint and is added to the backlog list for the next sprint, this is known as “snowplowing”.
+    True
+
+4. You should begin coding during the Explore phase of Agile.
+    True
+
+5. Programmers and web developers do not necessarily need good problem solving, critical thinking, or project management skills. They only need to know how to write good code.
+    False
+
+6. Stakeholders and project goals are established during the Speculate project phase.
+    False
+
+7. During the Agile project, the Project Manager’s role is to keep everyone on task & schedule meetings.
+    False
+
+8. The Agile project management process best characterized by projects that are implemented over short periods of time.
+    True
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+** Multiple Choice **
+
+/// PHP ///
+
+
+9. What does PHP stand for?
+    B. PHP: Hypertext Preprocessor
+
+10. PDO is also known as:
+    C. PHP Data Objects
+
+11. The following “IF” statement is a valid way to write a conditional in PHP:
+    if (!is_numeric($studentpercent)) { ... }
+
+    A. True
+
+12. DSN stands for ‘Data Source Node’, which is a connection string that tells the PHP Data Object (PDO) the type of database, where to access it, and the port to use.
+    B. False
+
+13. This is the correct way to connect to a MySQL database in PHP:
+    $user = root123;  $pass = 123root;
+    $dbh = PDO('mysql:host=localhost;dbname=ssl;port=8889', $user, $pass);
+
+    B. False
+
+14. The PHP code below demonstrates the correct way to prepare a SQL statement:
+    $stmt->$dbh = prepare(“insert into gifts (gift_name, gift_price) values(:giftname, :giftprice)");
+
+    B. False
+
+15. Session variables are set with the PHP global variable: $_SERVER:
+    B. False
+
+16. Sessions can be started using the set_session() function:
+    B. False
+
+17. The value of $result will be:
+    $data = “Happy Birthday!”;
+    $result = strlen($data) > 10;
+    echo $result;
+
+    A. True
+
+18. Evaluate the following: $data = trim(" 0 0 “);
+    The value of $data will result in $data = “0 0”.
+
+    A. True
+
+19. The $_FILES super global can be used to keep track of uploaded files.
+    B. False
+
+20. New cookie variables are set with the PHP super global variable: $_SESSION:
+    B. False
+
+21. Web developers should never trust the user input coming to a server-side script, and should perform server-side validation in addition to any client-side validation through HTML5 or JavaScript.
+    A. True
+
+22. Hashing is a form of one-way encryption. They cannot be reversed, but it is possible to guess & crack various combinations using rainbow tables.
+    A. True
+
+23. Which is the correct and best way to define a Class/Object in PHP:
+    C. class Graduate {...}
+
+24. Which is the correct and best way to define a Class Property/Attribute in PHP:
+    C. var $grad_gift = “money”;
+
+25. What is the correct & best way to “invoke” a Class’s method called “process_gradCapGown”:
+    C. $graduate1->process_gradCapGown();
+
+26. Which is not a valid way to use the “$this” keyword inside of a Class?
+    A. echo $this;
+
+
+/// Node.js ///
+
+
+27. Node.js is a server-side platform built on Google Chrome's JavaScript Engine (V8 Engine).
+    B. False - it is also used client-side
+
+28. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient, perfect for data-intensive real-time applications that run across distributed devices.
+    A. True
+
+29. Node.js is an open source, cross-platform runtime environment for developing client-side JavaScript applications.
+    B. False - also server-side
+
+30. Which phrase below is not true about Node.js:
+    E. None of the Above
+
+31. Node.js applications never buffer any data. These applications simply output the data in chunks.
+    A. True
+
+32. What will be the output of the following snippets?
+    app.js: console.log(‘nodebp’)
+    Terminal: node app.js
+
+    A. nodebp
+
+33. What will be the output of the following snippets?
+    app.js: var dep = require('./dep');console.log(dep(3))
+    dep.js: module.exports = function (val) {  return val * 2;}
+    Terminal: node app.js
+
+    B. 6
+
+34. What will be the output of the following snippets?
+    app.js: var http = require('http')
+    http.get('http://noderocks.com', function (response) {
+        response.setEncoding('utf8')
+        response.on('data', console.log)
+        response.on('error', console.error)
+    })
+    Terminal: node app.js
+
+    D. Other:
+    <html><head><meta http-equiv="refresh" content="0;url=http://www.dnsrsearch.com/index.php?origURL=http://noderocks.com/&bc="/></head><body><script type="text/javascript">window.location="http://www.dnsrsearch.com/index.php?origURL="+escape(window.location)+"&r="+escape(document.referrer)+"&bc=";</script></body></html>
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+** Essay **
+
+35. Explain the differences between the Web Servers that are used in MEAN vs. LAMP. (—Explain in 2 sentences)
+
+    MEAN uses MongoDB, which is a non-relational database, whereas LAMP uses MySQL, which is a relational database. The difference is in how data is stored. MongoDB (non-relational) data is represented in collections of JSON data. MySQL (relational) data is designated and saved in tables and rows.
+
+36. What are two (2) main differences between Client vs. Server-side Programming? (—Explain in 2 sentences)
+
+    Client-side programming applies languages such as JavaScript and CSS, which are responsible for what the user is seeing and interacting with (UI/UX). The server-side is the section that talks to the machine. Here you use languages such as PHP.
+
+37. Compare & contrast at least two (2) key differences between Cookies & Sessions. (—Explain in 2 sentences)
+
+    The main difference between cookies and sessions is that cookies are stored in the client's browser and sessions are stored server-side. Another key difference: cookies can only store one variable, whereas sessions can store multiple.
+
+38. Describe NPM, the purpose of it, and explain its functionality. (—Explain in 2 sentences)
+
+    NPM stands for Node package manager and is precisely that for JavaScript. Once NPM is installed, installing and requiring a project is a simple npm install command. The packages contain reusable code that helps ease the project's development.
+
+39. What is an API and how do they work differently in Node.js vs PHP? (—Explain in 2 sentences)
+
+    API stands for Application Programming Interface and is used to interact with a site and it's passed data. Node.js is asynchronous in nature, which means it won't get hung up on functions that haven't completed or didn't work. PHP switches language syntax quite often. 
+
+40. Name AND describe EACH of the 5 states of the Agile Development Life Cycle. (—Explain in 2 sentences)
+
+    The 5 stages of agile development are, in order, Envision, Speculate, Explore, Adapt, and Close. The Envision phase is where you create the scope of the project and plan out all the details. The Speculate phase is where the team identifies the features of the project. The Explore phase is where everyone can start to build out what they have thought up in the last two phases. The Adapt phase is where the team fixes what is not working and makes any last changes. The process is repeated until the project is finished. The Close phase is the last phase when all your work is done.
+
+41. Explain CRUD and how it allow you to manipulate databases. (—Explain in 2 sentences)
+
+    CRUD stands for create, read, update, and delete. They are functions that allow users to interact and manipulate data within a database.
+
+42. Why is it important for WDD students to learn to work within a team environment? Also, explain why it's important to have a resume & online portfolio before graduating? (—Explain in 2 sentences)
+
+    The ability to work with and collaborate effectively with a team is imperative in the workplace, therefore making it essential for WDD students to learn as well. No great things are done alone. A resume and an online portfolio are necessary to get started finding a career. These tell possible future employers about you and what your skills are.
